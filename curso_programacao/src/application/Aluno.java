@@ -2,14 +2,14 @@ package application;
 
 public class Aluno {
 
-	String nome;
-	String curso;
-	int semestre;
-	double nota1;
-	double nota2;
-	double media;
-	String situacao;
-	double notaExame;
+	public String nome;
+	public String curso;
+	public int semestre;
+	public double nota1;
+	public double nota2;
+	public double media;
+	public String situacao;
+	public double notaExame;
 
 	public double calcularMedia() {
 		return (nota1 + nota2) / 2;
@@ -24,13 +24,15 @@ public class Aluno {
 
 		} else {
 			this.situacao = "Aprovado";
-		} 
-		
-	} public void exameAluno(double notaExame) {
+		}
+
+	}
+
+	public void exameAluno(double notaExame) {
 		this.situacao.equals("Exame");
 		this.notaExame = notaExame;
-		
-		if(this.notaExame > 6) {
+
+		if (this.notaExame > 6) {
 			this.situacao = "Aprovado";
 		} else {
 			this.situacao = "Reprovado";

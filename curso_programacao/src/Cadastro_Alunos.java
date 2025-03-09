@@ -11,7 +11,13 @@ public class Cadastro_Alunos {
 		
 		Aluno aluno = new Aluno();
 		
-		System.out.println("Insira o nome do aluno");
+		System.out.println("Insira o nome do aluno: ");
+		aluno.nome = sc.next();
+		System.out.println("Insira o curso em que o aluno está matriculado: ");
+		aluno.curso = sc.next();
+		System.out.println("Insira o semestre que o aluno está: ");
+		aluno.semestre = sc.nextInt();
+		System.out.println("NOVA BRANCH NO ECPLISE DE MALUKÃOP MESMO");
 		
 		
 		
