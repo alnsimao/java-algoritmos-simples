@@ -33,15 +33,14 @@ public class Aluno {
 
 	}
 
-	public void exameAluno(double notaExame) {
-		situacao.equals("Exame");
-		this.notaExame = notaExame;
-
+	public String exameAluno(String situacao) {
+		this.situacao.equals("Exame");
+		
 		if (this.notaExame > 6) {
-			situacao = "Aprovado";
+			this.situacao = "Aprovado";
 		} else {
-			situacao = "Reprovado";
-		}
+			this.situacao = "Reprovado";
+		} return this.situacao;
 	}
 
 	public String toString() {
@@ -49,6 +48,7 @@ public class Aluno {
 	           "Curso: " + curso + "\n" +
 	           "Semestre: " + semestre + "\n" +
 	           "Média: " + String.format("%.2f", calcularMedia()) + "\n" +
-	           "Situação: " + situacaoAluno();
+	           "Situação: " + situacaoAluno()+ "\n" + 
+	    		"Exame: " + exameAluno(situacao);
 	}
 }
