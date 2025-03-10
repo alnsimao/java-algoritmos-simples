@@ -38,4 +38,11 @@ public class Aluno {
 			this.situacao = "Reprovado";
 		}
 	}
+
+	public String toString() {
+	    return "Nome: " + nome + "\n" +
+	           "Curso: " + curso + "\n" +
+	           "Semestre: " + semestre + "\n" +
+	           "Média: " + String.format("%.2f", calcularMedia());
+	}
 }

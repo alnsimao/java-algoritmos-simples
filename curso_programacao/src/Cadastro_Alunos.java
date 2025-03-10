@@ -21,6 +21,8 @@ public class Cadastro_Alunos {
 		aluno.nota1 = sc.nextDouble();
 		aluno.nota2 = sc.nextDouble();
 		
+		System.out.println(aluno);
+		
 		
 	
 		
