@@ -17,15 +17,19 @@ public class Aluno {
 	}
 
 	public String situacaoAluno() {
-		if (media < 3) {
-			situacao = "Reprovado";
-		} else if (this.media >= 3 && media <= 5) {
-			situacao = "Exame";
-
-		} else {
+		media = calcularMedia();
+		if (media >= 6 && media <=10 ) {
 			situacao = "Aprovado";
+		} else if (media <=5 && media >=3) {
+			situacao = "Exame";
 		}
-		return situacao;
+			else if(media <3 && media >=0) {
+			situacao = "Reprovado";
+		} else {
+			situacao = "Nota inválida, insira novamente";
+			
+		}
+		return this.situacao;
 
 	}
 

@@ -20,9 +20,16 @@ public class Cadastro_Alunos {
 		System.out.println("Coloque as notas do aluno (2): ");
 		aluno.nota1 = sc.nextDouble();
 		aluno.nota2 = sc.nextDouble();
-		
+		System.out.println(aluno.calcularMedia());
 		System.out.println(aluno);
 		
+		
+		String situacao = aluno.situacaoAluno();
+		
+		if (situacao.equals("Exame")) {
+			 System.out.println("O aluno está de exame. Insira a nota do exame: ");
+	            aluno.notaExame = sc.nextDouble();
+		}
 		
 	
 		
