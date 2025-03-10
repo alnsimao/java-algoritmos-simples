@@ -16,26 +16,27 @@ public class Aluno {
 
 	}
 
-	public void situaçãoAluno() {
-		if (this.media < 3) {
-			this.situacao = "Reprovado";
-		} else if (this.media >= 3 && this.media <= 5) {
-			this.situacao = "Exame";
+	public String situacaoAluno() {
+		if (media < 3) {
+			situacao = "Reprovado";
+		} else if (this.media >= 3 && media <= 5) {
+			situacao = "Exame";
 
 		} else {
-			this.situacao = "Aprovado";
+			situacao = "Aprovado";
 		}
+		return situacao;
 
 	}
 
 	public void exameAluno(double notaExame) {
-		this.situacao.equals("Exame");
+		situacao.equals("Exame");
 		this.notaExame = notaExame;
 
 		if (this.notaExame > 6) {
-			this.situacao = "Aprovado";
+			situacao = "Aprovado";
 		} else {
-			this.situacao = "Reprovado";
+			situacao = "Reprovado";
 		}
 	}
 
@@ -43,6 +44,7 @@ public class Aluno {
 	    return "Nome: " + nome + "\n" +
 	           "Curso: " + curso + "\n" +
 	           "Semestre: " + semestre + "\n" +
-	           "Média: " + String.format("%.2f", calcularMedia());
+	           "Média: " + String.format("%.2f", calcularMedia()) + "\n" +
+	           "Situação: " + situacaoAluno();
 	}
 }

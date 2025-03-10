@@ -12,7 +12,7 @@ public class Cadastro_Alunos {
 		Aluno aluno = new Aluno();
 		
 		System.out.println("Insira o nome do aluno: ");
-		aluno.nome = sc.next();
+		aluno.nome = sc.nextLine();
 		System.out.println("Insira o curso em que o aluno está matriculado: ");
 		aluno.curso = sc.next();
 		System.out.println("Insira o semestre que o aluno está: ");
