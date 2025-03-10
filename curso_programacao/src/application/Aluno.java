@@ -27,12 +27,10 @@ public class Aluno {
 			situacao = "Reprovado";
 		} else {
 			situacao = "Nota inválida, insira novamente";
-			
 		}
 		return this.situacao;
 
 	}
-
 	public String exameAluno(String situacao) {
 		this.situacao.equals("Exame");
 		
@@ -48,7 +46,6 @@ public class Aluno {
 	           "Curso: " + curso + "\n" +
 	           "Semestre: " + semestre + "\n" +
 	           "Média: " + String.format("%.2f", calcularMedia()) + "\n" +
-	           "Situação: " + situacaoAluno()+ "\n" + 
-	    		"Exame: " + exameAluno(situacao);
+	           "Situação: " + situacaoAluno()+ "\n";
 	}
 }
