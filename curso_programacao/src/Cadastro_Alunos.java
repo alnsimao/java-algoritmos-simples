@@ -17,7 +17,12 @@ public class Cadastro_Alunos {
 		aluno.curso = sc.next();
 		System.out.println("Insira o semestre que o aluno está: ");
 		aluno.semestre = sc.nextInt();
-		System.out.println("NOVA BRANCH NO ECPLISE DE MALUKÃOP MESMO");
+		System.out.println("Coloque as notas do aluno (2): ");
+		aluno.nota1 = sc.nextDouble();
+		aluno.nota2 = sc.nextDouble();
+		
+		
+	
 		
 		
 		
