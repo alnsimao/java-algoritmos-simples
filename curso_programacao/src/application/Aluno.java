@@ -2,38 +2,50 @@ package application;
 
 public class Aluno {
 
-	String nome;
-	String curso;
-	int semestre;
-	double nota1;
-	double nota2;
-	double media;
-	String situacao;
-	double notaExame;
+	public String nome;
+	public String curso;
+	public int semestre;
+	public double nota1;
+	public double nota2;
+	public double media;
+	public String situacao;
+	public double notaExame;
 
 	public double calcularMedia() {
 		return (nota1 + nota2) / 2;
 
 	}
 
-	public void situaçãoAluno() {
-		if (this.media < 3) {
-			this.situacao = "Reprovado";
-		} else if (this.media >= 3 && this.media <= 5) {
-			this.situacao = "Exame";
-
-		} else {
-			this.situacao = "Aprovado";
-		} 
-		
-	} public void exameAluno(double notaExame) {
-		this.situacao.equals("Exame");
-		this.notaExame = notaExame;
-		
-		if(this.notaExame > 6) {
-			this.situacao = "Aprovado";
-		} else {
-			this.situacao = "Reprovado";
+	public String situacaoAluno() {
+		media = calcularMedia();
+		if (media >= 6 && media <=10 ) {
+			situacao = "Aprovado";
+		} else if (media <=5 && media >=3) {
+			situacao = "Exame";
 		}
+			else if(media <3 && media >=0) {
+			situacao = "Reprovado";
+		} else {
+			situacao = "Nota inválida, insira novamente";
+		}
+		return this.situacao;
+
+	}
+	public String exameAluno(String situacao) {
+		this.situacao.equals("Exame");
+		
+		if (this.notaExame > 6) {
+			this.situacao = "Aprovado";
+		} else {
+			this.situacao = "Reprovado";
+		} return this.situacao;
+	}
+
+	public String toString() {
+	    return "Nome: " + nome + "\n" +
+	           "Curso: " + curso + "\n" +
+	           "Semestre: " + semestre + "\n" +
+	           "Média: " + String.format("%.2f", calcularMedia()) + "\n" +
+	           "Situação: " + situacaoAluno()+ "\n";
 	}
 }
