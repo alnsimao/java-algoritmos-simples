@@ -37,6 +37,7 @@ public class Cadastro_Alunos {
 					+ aluno.semestre + "º Semestre" + "\n" + "Nota Exame: " + aluno.notaExame + "\n" + "Situação Final: "
 					+ aluno.exameAluno(situacao));
 		}
+		System.out.println("Testando");
 
 		sc.close();
 
