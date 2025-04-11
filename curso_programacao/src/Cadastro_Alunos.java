@@ -27,17 +27,12 @@ public class Cadastro_Alunos {
 
 		if (situacao.equals("Exame")) {
 			System.out.println("O aluno está de exame. Insira a nota do exame: ");
-			
 			aluno.notaExame = sc.nextDouble();
-			
 			System.out.println("Exame: " + aluno.exameAluno(situacao) + "\n\n");
-			
-			
 			System.out.println("Nome: " + aluno.nome + "\n" + "Curso: " + aluno.curso + "\n" + "Semestre: "
 					+ aluno.semestre + "º Semestre" + "\n" + "Nota Exame: " + aluno.notaExame + "\n" + "Situação Final: "
-					+ aluno.exameAluno(situacao));
+						+ aluno.exameAluno(situacao));
 		}
-		System.out.println("Testando");
 
 		sc.close();
 
